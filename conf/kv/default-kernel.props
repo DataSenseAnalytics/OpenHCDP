@@ -1,0 +1,8 @@
+#- type start -
+# kernel
+#- type end -
+spark.yarn.queue = default
+spark.driver.memory = 1G
+spark.executor.memory = 1G
+spark.executor.instances = 2
+spark.executor.cores = 2
