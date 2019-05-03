@@ -1,0 +1,3 @@
+smv.conn.default.type = hdfs
+smv.conn.default.path = atlas_state/data/ohcdp/input/
+    

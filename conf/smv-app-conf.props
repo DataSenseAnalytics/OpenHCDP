@@ -1,0 +1,10 @@
+# application name
+smv.appName = ohcdp
+
+# stage definitions
+smv.stages = ohcdp
+
+smv.lock = true
+smv.runtimeConfigFile = conf/kv/default-run.props
+smv.kernelConfigFile = conf/kv/default-kernel.props
+    
