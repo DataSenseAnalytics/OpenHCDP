@@ -28,13 +28,13 @@ class fullNpiList(dsalib.DsaPySparkModule):
         #	pyspark.sql.functions as F
         # Input module name(s) (e.g. npiMaster) can be used directly as the DataFrame which it outputs.
         return npiMaster.select(
-            col('NPI').alias('id'),
-            col('Provider_First_Name').alias('First_Name'),
-            col('Provider_Last_Name_Legal_Name').alias('Last_Name'),
-            col('Provider_First_Line_Business_Practice_Location_Address').alias('Line_1_Street_Address'),
-            col('Provider_Business_Practice_Location_Address_Postal_Code').alias('Zip_Code'),
-            col('Healthcare_Provider_Taxonomy_Code_1')
-        ).filter(length(col('Zip_Code')) >= 5)
+            F.col('NPI').alias('id'),
+            F.col('Provider_First_Name').alias('First_Name'),
+            F.col('Provider_Last_Name_Legal_Name').alias('Last_Name'),
+            F.col('Provider_First_Line_Business_Practice_Location_Address').alias('Line_1_Street_Address'),
+            F.col('Provider_Business_Practice_Location_Address_Postal_Code').alias('Zip_Code'),
+            F.col('Healthcare_Provider_Taxonomy_Code_1')
+        ).filter(F.length(F.col('Zip_Code')) >= 5)
     def requiresConfig(self):
         return []
     def requiresLib(self):
