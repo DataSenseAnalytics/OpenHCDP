@@ -1,3 +1,5 @@
 smv.conn.default.type = hdfs
 smv.conn.default.path = atlas_state/data/ohcdp/input/
     
+smv.conn.NPI_master.path = /data/ohcdp_input/NPI_master
+smv.conn.NPI_master.type = hdfs
